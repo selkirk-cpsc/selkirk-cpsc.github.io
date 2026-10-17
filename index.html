@@ -42,12 +42,12 @@
   .topbar .name { font-weight: 600; }
 
   main { max-width: 820px; margin: 0 auto; padding: 8px 16px 48px; }
-  header.title { margin: 28px 0 8px; }
-  header.title .logo { display: block; height: 80px; width: auto; max-width: 100%; margin: 0 0 20px auto;
+  header.title { margin: 28px 0 8px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+  header.title .logo { display: block; flex: none; height: 80px; width: auto;
     background: var(--logo-bg); padding: var(--logo-pad); border-radius: 10px; box-sizing: content-box; }
-  @media (max-width: 480px) { header.title .logo { height: 60px; } }
+  @media (max-width: 480px) { header.title .logo { height: 44px; } }
   header.title .week { color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: .06em; font-size: .85rem; }
-  header.title h1 { margin: 4px 0 0; font-size: 2.1rem; line-height: 1.2; }
+  header.title h1 { margin: 0; font-size: 2.1rem; line-height: 1.2; }
 
   h2 { font-size: 1.6rem; margin: 2em 0 .6em; padding-bottom: .2em; border-bottom: 2px solid var(--line); }
 
@@ -80,8 +80,8 @@
 
 <main>
 <header class="title">
-<img class="logo" src="selkirk_logo.png" alt="Selkirk College" width="1205" height="499">
 <h1>Computer Science Courses</h1>
+<img class="logo" src="selkirk_logo.png" alt="Selkirk College" width="1205" height="499">
 </header>
 
 <p>Course sites for computer science at Selkirk College. Each one has the
