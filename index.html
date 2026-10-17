@@ -14,16 +14,19 @@
     --line: #d6d6db;
     --accent: #2f6fde;
     --accent-soft: #dce8fd;
+    --logo-bg: transparent; --logo-pad: 0;
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
       --bg: #141518; --panel: #1e1f23; --ink: #ececf0; --muted: #9b9ca5;
       --line: #3a3b42; --accent: #6ea0ff; --accent-soft: #1d3157;
+      --logo-bg: #ffffff; --logo-pad: 10px 14px;
     }
   }
   :root[data-theme="dark"] {
     --bg: #141518; --panel: #1e1f23; --ink: #ececf0; --muted: #9b9ca5;
     --line: #3a3b42; --accent: #6ea0ff; --accent-soft: #1d3157;
+    --logo-bg: #ffffff; --logo-pad: 10px 14px;
   }
 
   * { box-sizing: border-box; }
@@ -40,6 +43,9 @@
 
   main { max-width: 820px; margin: 0 auto; padding: 8px 16px 48px; }
   header.title { margin: 28px 0 8px; }
+  header.title .logo { display: block; height: 80px; width: auto; max-width: 100%; margin-bottom: 20px;
+    background: var(--logo-bg); padding: var(--logo-pad); border-radius: 10px; box-sizing: content-box; }
+  @media (max-width: 480px) { header.title .logo { height: 60px; } }
   header.title .week { color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: .06em; font-size: .85rem; }
   header.title h1 { margin: 4px 0 0; font-size: 2.1rem; line-height: 1.2; }
 
@@ -74,7 +80,7 @@
 
 <main>
 <header class="title">
-<div class="week">Selkirk College</div>
+<img class="logo" src="selkirk_logo.png" alt="Selkirk College" width="1205" height="499">
 <h1>Computer Science Courses</h1>
 </header>
 
